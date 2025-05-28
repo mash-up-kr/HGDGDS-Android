@@ -14,7 +14,7 @@ android {
         applicationId = "com.hgdgds.kokkok"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
-        versionCode = 1
+        versionCode = libs.versions.versionCode.get().toInt()
         versionName = libs.versions.appVersion.get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
