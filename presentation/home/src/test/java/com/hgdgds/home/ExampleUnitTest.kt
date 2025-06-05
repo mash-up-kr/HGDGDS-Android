@@ -1,4 +1,4 @@
-package com.hgdgds.kokkok.presentation
+package com.hgdgds.home
 
 import org.junit.Test
 

@@ -46,7 +46,7 @@ dependencies {
     implementation(project(":core:designsystem"))
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(project(":presentation"))
+    implementation(project(":presentation:home"))
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle)

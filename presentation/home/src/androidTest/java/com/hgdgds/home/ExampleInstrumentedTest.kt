@@ -1,4 +1,4 @@
-package com.hgdgds.kokkok.presentation
+package com.hgdgds.home
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.hgdgds.kokkok.presentation.test", appContext.packageName)
+        assertEquals("com.hgdgds.home.test", appContext.packageName)
     }
 }
