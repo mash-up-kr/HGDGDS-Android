@@ -5,6 +5,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigation
+import com.hgdgds.home.HomeScreen
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -18,7 +19,7 @@ fun NavController.navigateToHome(navOptions: NavOptions) = navigate(route = Home
 fun NavGraphBuilder.homeSection(
 ) {
     navigation<HomeBase>(startDestination = Home) {
-        composable<Home> { backStackEntry ->
+        composable<Home> {
             HomeScreen()
         }
     }

@@ -149,6 +149,6 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 
 [bundles]
 lifecycle = ["lifecycle", "lifecycle-viewmodel"]
-compose = ["ui", "ui-graphics", "ui-tooling", "ui-tooling-preview", "material-compose", "coil-compose", "compose-lottie", "ui-foundation", "activity-compose", "navigation-compose", "lifecycle-compose", "hilt-navigation-compose"]
+compose = ["ui", "ui-graphics", "ui-tooling", "ui-tooling-preview", "material-compose", "coil-compose", "compose-lottie", "ui-foundation", "activity-compose", "navigation-compose", "lifecycle-compose", "hilt-navigation-compose", "androidx-material3"]
 moshi = ["moshi", "moshi-adapter", "retrofit-converter-moshi"]
 okhttp = ["okhttp", "okhttp-logging-interceptor"]
