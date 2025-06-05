@@ -13,6 +13,8 @@ import androidx.navigation.navOptions
 import com.hgdgds.home.navigation.navigateToHome
 import com.hgdgds.kokkok.navigation.KokTopLevelDestination
 import com.hgdgds.kokkok.navigation.KokTopLevelDestination.HOME
+import com.hgdgds.kokkok.navigation.KokTopLevelDestination.MY_PAGE
+import com.hgdgds.kokkok.navigation.KokTopLevelDestination.RESERVE
 
 @Composable
 fun rememberKokAppState(
@@ -58,8 +60,8 @@ class KokAppState(
 
         when (topLevelDestination) {
             HOME -> navController.navigateToHome(topLevelNavOptions)
-//            RESERVE -> TODO()
-//            MY_PAGE -> TODO()
+            RESERVE -> TODO()
+            MY_PAGE -> TODO()
         }
     }
 }
