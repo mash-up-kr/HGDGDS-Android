@@ -31,6 +31,8 @@ java-lite = "3.18.0"
 
 # material
 material = "1.12.0"
+androidxComposeFoundation = "1.8.0-alpha07"
+androidxComposeMaterial3Adaptive = "1.1.0-rc01"
 
 # test
 junit = "4.13.2"
@@ -128,7 +130,12 @@ activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref
 
 # material
 google-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "androidxComposeFoundation" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-material3-navigationSuite = { group = "androidx.compose.material3", name = "material3-adaptive-navigation-suite" }
+androidx-compose-material3-adaptive = { group = "androidx.compose.material3.adaptive", name = "adaptive", version.ref = "androidxComposeMaterial3Adaptive" }
 
 # kotest
 kotest-runner = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotestVersion" }
@@ -149,6 +156,6 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 
 [bundles]
 lifecycle = ["lifecycle", "lifecycle-viewmodel"]
-compose = ["ui", "ui-graphics", "ui-tooling", "ui-tooling-preview", "material-compose", "coil-compose", "compose-lottie", "ui-foundation", "activity-compose", "navigation-compose", "lifecycle-compose", "hilt-navigation-compose", "androidx-material3"]
+compose = ["ui", "ui-graphics", "ui-tooling", "ui-tooling-preview", "material-compose", "coil-compose", "compose-lottie", "ui-foundation", "activity-compose", "navigation-compose", "lifecycle-compose", "hilt-navigation-compose"]
 moshi = ["moshi", "moshi-adapter", "retrofit-converter-moshi"]
 okhttp = ["okhttp", "okhttp-logging-interceptor"]

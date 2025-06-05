@@ -48,6 +48,13 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":presentation:home"))
 
+    api(libs.androidx.compose.foundation)
+    api(libs.androidx.compose.foundation.layout)
+    api(libs.androidx.compose.material.iconsExtended)
+    api(libs.androidx.compose.material3)
+    api(libs.androidx.compose.material3.adaptive)
+    api(libs.androidx.compose.material3.navigationSuite)
+
     implementation(libs.core.ktx)
     implementation(libs.lifecycle)
     implementation(platform(libs.compose.bom))
@@ -56,5 +63,5 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.timber)
     implementation(libs.google.material)
-    implementation(libs.androidx.material3)
+
 }
