@@ -1,4 +1,3 @@
 package com.hgdgds.kokkok.domain
 
-class Sample {
-}
+class Sample
