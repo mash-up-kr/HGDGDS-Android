@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.hgdgds.kokkok.ui.KokApp
 import com.hgdgds.kokkok.ui.rememberKokAppState
-import com.hgdgds.kokkok.ui.theme.KokKokTheme
+import com.hgdgds.kokkok.ui.theme.KokTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             val appState = rememberKokAppState()
 
-            KokKokTheme {
+            KokTheme {
                 KokApp(appState)
             }
         }
