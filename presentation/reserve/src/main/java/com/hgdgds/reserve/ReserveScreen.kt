@@ -1,12 +1,12 @@
-package com.hgdgds.home
+package com.hgdgds.reserve
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-fun HomeScreen() {
+fun ReserveScreen() {
     Column {
-        Text("Home")
+        Text("Reserve")
     }
 }
