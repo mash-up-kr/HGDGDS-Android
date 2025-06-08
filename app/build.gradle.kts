@@ -48,6 +48,7 @@ dependencies {
     implementation(project(":domain"))
     implementation(project(":presentation:home"))
     implementation(project(":presentation:reserve"))
+    implementation(project(":presentation:mypage"))
 
     api(libs.androidx.compose.foundation)
     api(libs.androidx.compose.foundation.layout)

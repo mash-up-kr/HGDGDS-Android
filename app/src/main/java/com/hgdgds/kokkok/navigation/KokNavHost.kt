@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import com.hgdgds.home.navigation.HomeBase
 import com.hgdgds.home.navigation.homeSection
 import com.hgdgds.kokkok.ui.KokAppState
+import com.hgdgds.mypage.navigation.myPageSection
 import com.hgdgds.reserve.navigation.reserveSection
 
 @Composable
@@ -21,6 +22,6 @@ fun KokNavHost(
     ) {
         homeSection()
         reserveSection()
-        // myPageSection()
+        myPageSection()
     }
 }
