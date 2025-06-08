@@ -46,9 +46,7 @@ dependencies {
     implementation(project(":core:designsystem"))
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(project(":presentation:home"))
-    implementation(project(":presentation:reserve"))
-    implementation(project(":presentation:mypage"))
+    implementation(project(":presentation"))
 
     api(libs.androidx.compose.foundation)
     api(libs.androidx.compose.foundation.layout)
