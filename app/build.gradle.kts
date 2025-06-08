@@ -30,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -46,7 +46,16 @@ dependencies {
     implementation(project(":core:designsystem"))
     implementation(project(":data"))
     implementation(project(":domain"))
-    implementation(project(":presentation"))
+    implementation(project(":presentation:home"))
+    implementation(project(":presentation:reserve"))
+    implementation(project(":presentation:mypage"))
+
+    api(libs.androidx.compose.foundation)
+    api(libs.androidx.compose.foundation.layout)
+    api(libs.androidx.compose.material.iconsExtended)
+    api(libs.androidx.compose.material3)
+    api(libs.androidx.compose.material3.adaptive)
+    api(libs.androidx.compose.material3.navigationSuite)
 
     implementation(libs.core.ktx)
     implementation(libs.lifecycle)
@@ -56,5 +65,5 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.timber)
     implementation(libs.google.material)
-    implementation(libs.androidx.material3)
+
 }
