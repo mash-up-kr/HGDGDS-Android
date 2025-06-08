@@ -27,4 +27,13 @@ dependencies {
     ksp(libs.hilt.compiler)
     implementation(libs.timber)
     implementation(libs.kotlinx.collections.immutable)
+
+    // Okhttp
+    implementation(libs.bundles.okhttp)
+
+    // Retrofit
+    implementation(libs.retrofit)
+
+    // Moshi
+    implementation(libs.bundles.moshi)
 }
