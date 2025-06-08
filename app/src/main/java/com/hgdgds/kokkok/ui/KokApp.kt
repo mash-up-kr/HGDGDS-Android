@@ -2,7 +2,6 @@ package com.hgdgds.kokkok.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.WindowInsetsSides
 import androidx.compose.foundation.layout.consumeWindowInsets
@@ -13,8 +12,6 @@ import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.NavigationRailItemDefaults
@@ -25,7 +22,6 @@ import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffo
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScope
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hasRoute
@@ -91,47 +87,6 @@ fun KokApp(
         }
 
     }
-}
-
-
-@Composable
-fun RowScope.KokNavigationBarItem(
-    selected: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    enabled: Boolean = true,
-    icon: @Composable () -> Unit,
-    selectedIcon: @Composable () -> Unit = icon,
-    label: @Composable (() -> Unit)? = null,
-) {
-    NavigationBarItem(
-        selected = selected,
-        onClick = onClick,
-        icon = if (selected) selectedIcon else icon,
-        modifier = modifier,
-        enabled = enabled,
-        label = label,
-        colors = NavigationBarItemDefaults.colors(
-            selectedIconColor = KokNavigationDefaults.navigationSelectedItemColor(),
-            unselectedIconColor = KokNavigationDefaults.navigationContentColor(),
-            selectedTextColor = KokNavigationDefaults.navigationSelectedItemColor(),
-            unselectedTextColor = KokNavigationDefaults.navigationContentColor(),
-            indicatorColor = KokNavigationDefaults.navigationIndicatorColor(),
-        ),
-    )
-}
-
-
-@Composable
-fun KokNavigationBar(
-    modifier: Modifier = Modifier,
-    content: @Composable RowScope.() -> Unit,
-) {
-    NavigationBar(
-        modifier = modifier,
-        contentColor = KokNavigationDefaults.navigationContentColor(),
-        content = content,
-    )
 }
 
 
