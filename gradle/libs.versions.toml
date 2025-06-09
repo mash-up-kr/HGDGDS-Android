@@ -50,7 +50,6 @@ coil = "2.5.0"
 lottie = "6.0.1"
 splash-screen = "1.0.1"
 javax-inject = "1"
-moshi = "1.15.0"
 junitVersion = "4.13.2"
 androidxJunit = "1.2.1"
 espressoCore = "3.6.1"
@@ -117,12 +116,8 @@ hilt-plugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin"
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
-retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter-moshi", version.ref = "retrofit" }
 timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 coil-core = { module = "io.coil-kt:coil", version.ref = "coil" }
-moshi = { module = "com.squareup.moshi:moshi-kotlin", version.ref = "moshi" }
-moshi-adapter = { module = "com.squareup.moshi:moshi-adapters", version.ref = "moshi" }
-moshi-codegen = { module = "com.squareup.moshi:moshi-kotlin-codegen", version.ref = "moshi" }
 junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -158,5 +153,4 @@ ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlint" }
 [bundles]
 lifecycle = ["lifecycle", "lifecycle-viewmodel"]
 compose = ["ui", "ui-graphics", "ui-tooling", "ui-tooling-preview", "material-compose", "coil-compose", "compose-lottie", "ui-foundation", "activity-compose", "navigation-compose", "lifecycle-compose", "hilt-navigation-compose"]
-moshi = ["moshi", "moshi-adapter", "retrofit-converter-moshi"]
 okhttp = ["okhttp", "okhttp-logging-interceptor"]

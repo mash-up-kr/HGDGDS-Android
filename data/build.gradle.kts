@@ -33,7 +33,4 @@ dependencies {
 
     // Retrofit
     implementation(libs.retrofit)
-
-    // Moshi
-    implementation(libs.bundles.moshi)
 }
