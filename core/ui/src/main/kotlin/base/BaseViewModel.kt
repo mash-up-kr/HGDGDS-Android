@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel<INTENT, STATE, SIDE_EFFECT>(stateInitializer: () -> STATE) :
-    ViewModel() {
+    ViewModel(), CoroutineExceptionHandlerDelegate by CoroutineExceptionHandlerImpl() {
     private val intentChannel = Channel<INTENT>()
 
     val state = intentChannel.receiveAsFlow()
