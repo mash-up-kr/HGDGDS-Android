@@ -19,11 +19,15 @@ import javax.inject.Singleton
 object HttpClientModule {
     @Provides
     fun providesHttpLoggingInterceptor(): HttpLoggingInterceptor =
-        HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
+        HttpLoggingInterceptor().apply {
+            level = HttpLoggingInterceptor.Level.BODY
+        }
 
     @Provides
     fun providesAdjustMaxRequestPerHostOKHttpDispatcher(): Dispatcher =
-        Dispatcher().apply { maxRequestsPerHost = 10 }
+        Dispatcher().apply {
+            maxRequestsPerHost = 10
+        }
 
     @Provides
     fun providesOKHttpClient(
@@ -55,4 +59,3 @@ object HttpClientModule {
             .build()
     }
 }
-

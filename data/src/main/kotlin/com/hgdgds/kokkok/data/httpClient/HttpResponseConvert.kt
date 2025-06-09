@@ -8,7 +8,6 @@ import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.net.UnknownServiceException
 
-
 private const val UNKNOWN_HOST_EXCEPTION_LOG_MESSAGE = "네트워크 연결상태 혹은 잘못된 도메인 요청입니다."
 private const val SOCKET_TIME_OUT_EXCEPTION_LOG_MESSAGE = "타임아웃 에러가 발생하였습니다."
 private const val CONNECT_EXCEPTION_LOG_MESSAGE = "서버가 다운되었거나 방화벽 관련 문제가 발생하였습니다."

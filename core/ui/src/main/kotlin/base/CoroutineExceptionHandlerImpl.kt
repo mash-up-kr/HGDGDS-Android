@@ -13,9 +13,7 @@ class CoroutineExceptionHandlerImpl : CoroutineExceptionHandlerDelegate {
             Timber.e(throwable, COROUTINE_EXCEPTION_HANDLER_DEFAULT_LOG_MESSAGE)
         }
 
-    override fun combineExceptionHandler(
-        vararg handlers: CoroutineExceptionHandler,
-    ): CoroutineExceptionHandler {
+    override fun combineExceptionHandler(vararg handlers: CoroutineExceptionHandler): CoroutineExceptionHandler {
         return CoroutineExceptionHandler { context, throwable ->
             handlers.forEach { it.handleException(context, throwable) }
         }
