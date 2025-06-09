@@ -37,6 +37,7 @@ dependencies {
 
     // Retrofit
     implementation(libs.retrofit)
+    implementation(libs.retrofit.kotlinx.serialization.converter)
 
     // kotlinx serialization
     implementation(libs.kotlin.serialization)
