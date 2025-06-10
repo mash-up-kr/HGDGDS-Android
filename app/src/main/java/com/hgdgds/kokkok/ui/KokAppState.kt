@@ -19,9 +19,7 @@ import com.hgdgds.kokkok.presentation.home.navigation.navigateToHome
 import com.hgdgds.kokkok.presentation.reserve.navigation.navigateToReserve
 
 @Composable
-fun rememberKokAppState(
-    navController: NavHostController = rememberNavController(),
-): KokAppState {
+fun rememberKokAppState(navController: NavHostController = rememberNavController()): KokAppState {
     return remember(
         navController,
     ) {
@@ -63,7 +61,7 @@ class KokAppState(
         when (topLevelDestination) {
             HOME -> navController.navigateToHome(topLevelNavOptions)
             RESERVE -> navController.navigateToReserve(topLevelNavOptions)
-            MY_PAGE ->  navController.navigateToMyPage(topLevelNavOptions)
+            MY_PAGE -> navController.navigateToMyPage(topLevelNavOptions)
         }
     }
 }

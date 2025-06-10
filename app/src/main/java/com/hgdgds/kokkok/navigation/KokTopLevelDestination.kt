@@ -16,7 +16,6 @@ import com.hgdgds.kokkok.presentation.home.navigation.HomeBase
 import com.hgdgds.kokkok.presentation.reserve.navigation.Reserve
 import kotlin.reflect.KClass
 
-
 enum class KokTopLevelDestination(
     val selectedIcon: ImageVector,
     val unselectedIcon: ImageVector,
@@ -44,4 +43,3 @@ enum class KokTopLevelDestination(
         route = MyPage::class,
     ),
 }
-
