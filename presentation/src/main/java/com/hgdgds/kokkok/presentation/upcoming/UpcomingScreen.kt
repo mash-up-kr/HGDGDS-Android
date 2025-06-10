@@ -1,16 +1,15 @@
-package com.hgdgds.kokkok.presentation.home
+package com.hgdgds.kokkok.presentation.upcoming
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun HomeScreen(
-    onReservationClick: (String) -> Unit,
+fun UpcomingScreen(
+    reversionId: String,
     modifier: Modifier = Modifier,
 ) {
     Box(
@@ -18,10 +17,6 @@ fun HomeScreen(
             .fillMaxSize(),
         contentAlignment = Alignment.Center,
     ) {
-        Button(
-            onClick = { onReservationClick("여기에 예약 아이디 넘김") },
-        ) {
-            Text("테스트")
-        }
+        Text(reversionId)
     }
 }
