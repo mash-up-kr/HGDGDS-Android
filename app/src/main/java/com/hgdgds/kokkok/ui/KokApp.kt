@@ -30,11 +30,8 @@ import com.hgdgds.kokkok.navigation.KokNavHost
 import kotlin.reflect.KClass
 
 @Composable
-fun KokApp(
-    appState: KokAppState,
-) {
+fun KokApp(appState: KokAppState) {
     val currentDestination = appState.currentDestination
-
     KokNavigationSuiteScaffold(
         navigationSuiteItems = {
             appState.topLevelDestinations.forEach { destination ->
@@ -76,7 +73,7 @@ fun KokApp(
             ) {
                 Box(
                     modifier = Modifier.consumeWindowInsets(
-                        WindowInsets(0, 0, 0, 0)
+                        WindowInsets(0, 0, 0, 0),
                     ),
                 ) {
                     KokNavHost(
@@ -85,10 +82,8 @@ fun KokApp(
                 }
             }
         }
-
     }
 }
-
 
 @Composable
 fun KokNavigationSuiteScaffold(
@@ -130,7 +125,6 @@ fun KokNavigationSuiteScaffold(
     }
 }
 
-
 class KokNavigationSuiteScope internal constructor(
     private val navigationSuiteScope: NavigationSuiteScope,
     private val navigationSuiteItemColors: NavigationSuiteItemColors,
@@ -168,7 +162,6 @@ object KokNavigationDefaults {
     @Composable
     fun navigationIndicatorColor() = MaterialTheme.colorScheme.primaryContainer
 }
-
 
 private fun NavDestination?.isRouteInHierarchy(route: KClass<*>) =
     this?.hierarchy?.any {
