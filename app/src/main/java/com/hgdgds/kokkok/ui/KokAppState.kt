@@ -20,9 +20,7 @@ import com.hgdgds.kokkok.presentation.reserve.navigation.navigateToReserve
 
 @Composable
 fun rememberKokAppState(navController: NavHostController = rememberNavController()): KokAppState {
-    return remember(
-        navController,
-    ) {
+    return remember(navController) {
         KokAppState(
             navController = navController,
         )

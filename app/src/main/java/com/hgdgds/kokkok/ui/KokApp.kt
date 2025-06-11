@@ -32,7 +32,6 @@ import kotlin.reflect.KClass
 @Composable
 fun KokApp(appState: KokAppState) {
     val currentDestination = appState.currentDestination
-
     KokNavigationSuiteScaffold(
         navigationSuiteItems = {
             appState.topLevelDestinations.forEach { destination ->
