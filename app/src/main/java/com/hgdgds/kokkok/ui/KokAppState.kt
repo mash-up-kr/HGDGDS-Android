@@ -10,13 +10,13 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
-import com.hgdgds.home.navigation.navigateToHome
+import com.hgdgds.kokkok.mypage.navigation.navigateToMyPage
 import com.hgdgds.kokkok.navigation.KokTopLevelDestination
 import com.hgdgds.kokkok.navigation.KokTopLevelDestination.HOME
 import com.hgdgds.kokkok.navigation.KokTopLevelDestination.MY_PAGE
 import com.hgdgds.kokkok.navigation.KokTopLevelDestination.RESERVE
-import com.hgdgds.mypage.navigation.navigateToMyPage
-import com.hgdgds.reserve.navigation.navigateToReserve
+import com.hgdgds.kokkok.presentation.home.navigation.navigateToHome
+import com.hgdgds.kokkok.presentation.reserve.navigation.navigateToReserve
 
 @Composable
 fun rememberKokAppState(navController: NavHostController = rememberNavController()): KokAppState {

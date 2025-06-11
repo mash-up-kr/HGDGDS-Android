@@ -9,11 +9,11 @@ import androidx.compose.material.icons.sharp.Check
 import androidx.compose.material.icons.sharp.Home
 import androidx.compose.material.icons.sharp.Person
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.hgdgds.home.navigation.Home
-import com.hgdgds.home.navigation.HomeBase
 import com.hgdgds.kokkok.R
-import com.hgdgds.mypage.navigation.MyPage
-import com.hgdgds.reserve.navigation.Reserve
+import com.hgdgds.kokkok.mypage.navigation.MyPage
+import com.hgdgds.kokkok.presentation.home.navigation.Home
+import com.hgdgds.kokkok.presentation.home.navigation.HomeBase
+import com.hgdgds.kokkok.presentation.reserve.navigation.Reserve
 import kotlin.reflect.KClass
 
 enum class KokTopLevelDestination(

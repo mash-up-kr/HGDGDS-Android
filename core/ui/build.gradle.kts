@@ -20,6 +20,9 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 dependencies {
