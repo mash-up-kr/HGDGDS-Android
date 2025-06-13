@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import com.hgdgds.kokkok.designsystem.theme.KokTheme
 import com.hgdgds.kokkok.ui.KokApp
 import com.hgdgds.kokkok.ui.rememberKokAppState
-import com.hgdgds.kokkok.ui.theme.KokTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
