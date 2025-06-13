@@ -7,9 +7,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
 
 @Composable
-fun KokTheme(
-    content: @Composable () -> Unit,
-) {
+fun KokTheme(content: @Composable () -> Unit) {
     CompositionLocalProvider(
         LocalColorScheme provides ColorScheme,
         LocalTypography provides Typography,

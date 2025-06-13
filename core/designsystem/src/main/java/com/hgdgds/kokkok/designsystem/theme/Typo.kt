@@ -32,12 +32,14 @@ private val suitStyle = TextStyle(
 )
 
 internal val Typography = KokTypography(
+    // display32
     display32Bold = suitStyle.copy(
         fontWeight = FontWeight.Bold,
         fontSize = 32.sp,
         lineHeight = 43.2.sp,
         letterSpacing = TextUnit(-0.022f, TextUnitType.Em),
     ),
+    // heading24
     heading24Bold = suitStyle.copy(
         fontWeight = FontWeight.Bold,
         fontSize = 24.sp,
@@ -56,6 +58,7 @@ internal val Typography = KokTypography(
         lineHeight = 32.4.sp,
         letterSpacing = TextUnit(-0.022f, TextUnitType.Em),
     ),
+    // title20
     title20Bold = suitStyle.copy(
         fontWeight = FontWeight.Bold,
         fontSize = 20.sp,
@@ -74,6 +77,7 @@ internal val Typography = KokTypography(
         lineHeight = 27.sp,
         letterSpacing = TextUnit(-0.022f, TextUnitType.Em),
     ),
+    // subtitle18
     subtitle18Bold = suitStyle.copy(
         fontWeight = FontWeight.Bold,
         fontSize = 18.sp,
@@ -92,6 +96,7 @@ internal val Typography = KokTypography(
         lineHeight = 24.3.sp,
         letterSpacing = TextUnit(-0.022f, TextUnitType.Em),
     ),
+    // body16
     body16Bold = suitStyle.copy(
         fontWeight = FontWeight.Bold,
         fontSize = 16.sp,
@@ -110,6 +115,7 @@ internal val Typography = KokTypography(
         lineHeight = 24.sp,
         letterSpacing = TextUnit(-0.022f, TextUnitType.Em),
     ),
+    // body14
     body14Bold = suitStyle.copy(
         fontWeight = FontWeight.Bold,
         fontSize = 14.sp,
@@ -128,6 +134,7 @@ internal val Typography = KokTypography(
         lineHeight = 21.sp,
         letterSpacing = TextUnit(-0.022f, TextUnitType.Em),
     ),
+    // caption12
     caption12Bold = suitStyle.copy(
         fontWeight = FontWeight.Bold,
         fontSize = 12.sp,
@@ -146,6 +153,7 @@ internal val Typography = KokTypography(
         lineHeight = 18.sp,
         letterSpacing = TextUnit(-0.022f, TextUnitType.Em),
     ),
+    // caption11
     caption11Bold = suitStyle.copy(
         fontWeight = FontWeight.Bold,
         fontSize = 11.sp,
@@ -166,35 +174,35 @@ internal val Typography = KokTypography(
     ),
 )
 
-
 @Immutable
 data class KokTypography(
+    // display32
     val display32Bold: TextStyle,
-
+    // heading24
     val heading24Bold: TextStyle,
     val heading24Medium: TextStyle,
     val heading24Regular: TextStyle,
-
+    // title20
     val title20Bold: TextStyle,
     val title20Medium: TextStyle,
     val title20Regular: TextStyle,
-
+    // subtitle
     val subtitle18Bold: TextStyle,
     val subtitle18Medium: TextStyle,
     val subtitle18Regular: TextStyle,
-
+    // body16
     val body16Bold: TextStyle,
     val body16Medium: TextStyle,
     val body16Regular: TextStyle,
-
+    // body14
     val body14Bold: TextStyle,
     val body14Medium: TextStyle,
     val body14Regular: TextStyle,
-
+    // caption12
     val caption12Bold: TextStyle,
     val caption12Medium: TextStyle,
     val caption12Regular: TextStyle,
-
+    // caption11
     val caption11Bold: TextStyle,
     val caption11Medium: TextStyle,
     val caption11Regular: TextStyle,

@@ -6,9 +6,10 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
 internal val ColorScheme = KokColorScheme(
+    // basic
     white = Color(0xFFFFFFFF),
     black = Color(0xFF0F1015),
-
+    // gray
     gray95 = Color(0xFF212332),
     gray90 = Color(0xFF383947),
     gray80 = Color(0xFF4E4F5B),
@@ -20,7 +21,7 @@ internal val ColorScheme = KokColorScheme(
     gray20 = Color(0xFFD3D3D6),
     gray15 = Color(0xFFE9E9EB),
     gray10 = Color(0xFFF6F6F7),
-
+    // opacity
     opacityBlack60 = Color(0x990F1015),
     opacityBlack30 = Color(0x4D0F1015),
     opacityWhite30 = Color(0x4DFFFFFF),
@@ -29,7 +30,7 @@ internal val ColorScheme = KokColorScheme(
     opacityBlue4 = Color(0x0A4F637C),
     opacityPurple4 = Color(0x0A666489),
     opacityGreen4 = Color(0x0A87AD78),
-
+    // orange
     orange700 = Color(0xFFE55218),
     orange500Main = Color(0xFFFE6A30),
     orange400 = Color(0xFFFE8859),
@@ -37,27 +38,27 @@ internal val ColorScheme = KokColorScheme(
     orange200 = Color(0xFFFFC3AC),
     orange100Light = Color(0xFFFFEEE6),
     orangeDark = Color(0xFFA88272),
-
+    // pink
     pinkMain = Color(0xFFFC4F92),
     pinkLight = Color(0xFFFFEDF3),
     pinkDark = Color(0xFF9C5A90),
-
+    // blue
     blueMain = Color(0xFF2B8BFF),
     blueLight = Color(0xFFE6F1FD),
     blueDark = Color(0xFF4F637C),
-
+    // purple
     purpleMain = Color(0xFF7C5BFF),
     purpleLight = Color(0xFFECECFF),
     purpleDark = Color(0xFF666589),
-
+    // green
     greenMain = Color(0xFF0FC24D),
     greenLight = Color(0xFFE9F7EE),
     greenDark = Color(0xFF87AD78),
-
+    // red
     redMain = Color(0xFFFF5D5D),
     redLight = Color(0xFFFFEEEE),
     redDark = Color(0xFFDE3333),
-
+    // gradient
     orangeGradientMain = Brush.linearGradient(
         colors = listOf(
             Color(0xFFFF710C),
@@ -78,7 +79,6 @@ internal val ColorScheme = KokColorScheme(
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
-
     pinkGradientMain = Brush.linearGradient(
         colors = listOf(
             Color(0xFFFC4F92),
@@ -93,7 +93,6 @@ internal val ColorScheme = KokColorScheme(
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
-
     blueGradientMain = Brush.linearGradient(
         colors = listOf(
             Color(0xFF2B8BFF),
@@ -108,7 +107,6 @@ internal val ColorScheme = KokColorScheme(
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
-
     purpleGradientMain = Brush.linearGradient(
         colors = listOf(
             Color(0xFF7C5BFF),
@@ -123,7 +121,6 @@ internal val ColorScheme = KokColorScheme(
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
-
     greenGradientMain = Brush.linearGradient(
         colors = listOf(
             Color(0xFF0FC24D),
@@ -142,9 +139,10 @@ internal val ColorScheme = KokColorScheme(
 
 @Immutable
 data class KokColorScheme(
+    // basic
     val white: Color,
     val black: Color,
-
+    // gray
     val gray95: Color,
     val gray90: Color,
     val gray80: Color,
@@ -156,7 +154,7 @@ data class KokColorScheme(
     val gray20: Color,
     val gray15: Color,
     val gray10: Color,
-
+    // opacity
     val opacityBlack60: Color,
     val opacityBlack30: Color,
     val opacityWhite30: Color,
@@ -165,7 +163,7 @@ data class KokColorScheme(
     val opacityBlue4: Color,
     val opacityPurple4: Color,
     val opacityGreen4: Color,
-
+    // orange
     val orange700: Color,
     val orange500Main: Color,
     val orange400: Color,
@@ -173,40 +171,36 @@ data class KokColorScheme(
     val orange200: Color,
     val orange100Light: Color,
     val orangeDark: Color,
-
+    // pink
     val pinkMain: Color,
     val pinkLight: Color,
     val pinkDark: Color,
-
+    // blue
     val blueMain: Color,
     val blueLight: Color,
     val blueDark: Color,
-
+    // purple
     val purpleMain: Color,
     val purpleLight: Color,
     val purpleDark: Color,
-
+    // green
     val greenMain: Color,
     val greenLight: Color,
     val greenDark: Color,
-
+    // red
     val redMain: Color,
     val redLight: Color,
     val redDark: Color,
-
+    // gradient
     val orangeGradientMain: Brush,
     val orangeGradientMain2: Brush,
     val orangeGradientLight: Brush,
-
     val pinkGradientMain: Brush,
     val pinkGradientLight: Brush,
-
     val blueGradientMain: Brush,
     val blueGradientLight: Brush,
-
     val purpleGradientMain: Brush,
     val purpleGradientLight: Brush,
-
     val greenGradientMain: Brush,
     val greenGradientLight: Brush,
 )
