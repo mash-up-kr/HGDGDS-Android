@@ -27,4 +27,5 @@ dependencies {
     implementation(libs.bundles.compose)
     implementation(libs.timber)
     implementation(libs.google.material)
+    implementation(libs.androidx.compose.material3)
 }
