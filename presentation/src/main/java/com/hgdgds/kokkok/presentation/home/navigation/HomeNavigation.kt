@@ -16,16 +16,12 @@ data object HomeBase
 
 fun NavController.navigateToHome(navOptions: NavOptions) = navigate(route = Home, navOptions)
 
-fun NavGraphBuilder.homeSection(
-    onReservationClick: (String) -> Unit,
-    upcomingDestination: NavGraphBuilder.() -> Unit,
-) {
+fun NavGraphBuilder.homeSection(onReservationClick: (String) -> Unit) {
     navigation<HomeBase>(startDestination = Home) {
         composable<Home> {
             HomeScreen(
                 onReservationClick = onReservationClick,
             )
         }
-        upcomingDestination()
     }
 }

@@ -32,54 +32,61 @@ import kotlin.reflect.KClass
 @Composable
 fun KokApp(appState: KokAppState) {
     val currentDestination = appState.currentDestination
-    KokNavigationSuiteScaffold(
-        navigationSuiteItems = {
-            appState.topLevelDestinations.forEach { destination ->
-                val selected = currentDestination
-                    .isRouteInHierarchy(destination.baseRoute)
-                item(
-                    selected = selected,
-                    onClick = { appState.navigateToTopLevelDestination(destination) },
-                    icon = {
-                        Icon(
-                            imageVector = destination.unselectedIcon,
-                            contentDescription = null,
-                        )
-                    },
-                    selectedIcon = {
-                        Icon(
-                            imageVector = destination.selectedIcon,
-                            contentDescription = null,
-                        )
-                    },
-                    label = { Text(stringResource(destination.iconTextId)) },
-                )
-            }
-        },
-    ) {
-        Scaffold(
-            contentWindowInsets = WindowInsets(0, 0, 0, 0),
-        ) { padding ->
-            Column(
-                Modifier
-                    .fillMaxSize()
-                    .padding(padding)
-                    .consumeWindowInsets(padding)
-                    .windowInsetsPadding(
-                        WindowInsets.safeDrawing.only(
-                            WindowInsetsSides.Horizontal,
-                        ),
-                    ),
-            ) {
-                Box(
-                    modifier = Modifier.consumeWindowInsets(
-                        WindowInsets(0, 0, 0, 0),
-                    ),
-                ) {
-                    KokNavHost(
-                        appState = appState,
+    val topLevelRoutes = appState.topLevelDestinations.map { it.baseRoute }
+
+    val shouldShowBottomBar = currentDestination?.hierarchy?.any { navDest ->
+        topLevelRoutes.any { route -> navDest.hasRoute(route) }
+    } == true
+
+    val content: @Composable () -> Unit = {
+        KokAppContent(appState = appState)
+    }
+
+    if (shouldShowBottomBar) {
+        KokNavigationSuiteScaffold(
+            navigationSuiteItems = {
+                appState.topLevelDestinations.forEach { destination ->
+                    val selected = currentDestination.isRouteInHierarchy(destination.baseRoute)
+                    item(
+                        selected = selected,
+                        onClick = { appState.navigateToTopLevelDestination(destination) },
+                        icon = {
+                            Icon(
+                                imageVector = destination.unselectedIcon,
+                                contentDescription = null,
+                            )
+                        },
+                        selectedIcon = {
+                            Icon(
+                                imageVector = destination.selectedIcon,
+                                contentDescription = null,
+                            )
+                        },
+                        label = { Text(stringResource(destination.iconTextId)) },
                     )
                 }
+            },
+            content = content,
+        )
+    } else {
+        content()
+    }
+}
+
+@Composable
+fun KokAppContent(appState: KokAppState) {
+    Scaffold { padding ->
+        Column(
+            Modifier
+                .fillMaxSize()
+                .padding(padding)
+                .consumeWindowInsets(padding)
+                .windowInsetsPadding(
+                    WindowInsets.safeDrawing.only(WindowInsetsSides.Horizontal),
+                ),
+        ) {
+            Box {
+                KokNavHost(appState = appState)
             }
         }
     }

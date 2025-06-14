@@ -24,10 +24,9 @@ fun KokNavHost(
     ) {
         homeSection(
             onReservationClick = navController::navigateToUpcoming
-        ) {
-            upcomingScreen()
-        }
+        )
         reserveSection()
         myPageSection()
+        upcomingScreen()
     }
 }
