@@ -79,6 +79,13 @@ internal val ColorScheme = KokColorScheme(
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
+    orangeGradientSub = Brush.linearGradient(
+        colorStops = arrayOf(
+            0.0f to Color(0xFFFE6A30),
+            0.8f to Color(0xFFFFEEE6),
+            1.0f to Color(0xFFF6F6F7),
+        ),
+    ),
     pinkGradientMain = Brush.linearGradient(
         colors = listOf(
             Color(0xFFFC4F92),
@@ -90,6 +97,13 @@ internal val ColorScheme = KokColorScheme(
             0.0f to Color(0xFFFD9FC3),
             0.2f to Color(0xFFFEDAE8),
             0.9f to Color(0xFFFFFAFC),
+            1.0f to Color(0xFFF6F6F7),
+        ),
+    ),
+    pinkGradientSub = Brush.linearGradient(
+        colorStops = arrayOf(
+            0.0f to Color(0xFFFC4F92),
+            0.8f to Color(0xFFFFEDF3),
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
@@ -107,6 +121,13 @@ internal val ColorScheme = KokColorScheme(
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
+    blueGradientSub = Brush.linearGradient(
+        colorStops = arrayOf(
+            0.0f to Color(0xFF2B8BFF),
+            0.8f to Color(0xFFE6F1FD),
+            1.0f to Color(0xFFF6F6F7),
+        ),
+    ),
     purpleGradientMain = Brush.linearGradient(
         colors = listOf(
             Color(0xFF7C5BFF),
@@ -121,6 +142,13 @@ internal val ColorScheme = KokColorScheme(
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
+    purpleGradientSub = Brush.linearGradient(
+        colorStops = arrayOf(
+            0.0f to Color(0xFF7C5BFF),
+            0.8f to Color(0xFFECECFF),
+            1.0f to Color(0xFFF6F6F7),
+        ),
+    ),
     greenGradientMain = Brush.linearGradient(
         colors = listOf(
             Color(0xFF0FC24D),
@@ -132,6 +160,13 @@ internal val ColorScheme = KokColorScheme(
             0.0f to Color(0xFF65D88D),
             0.2f to Color(0xFFBEF2D0),
             0.9f to Color(0xFFEEFBF2),
+            1.0f to Color(0xFFF6F6F7),
+        ),
+    ),
+    greenGradientSub = Brush.linearGradient(
+        colorStops = arrayOf(
+            0.0f to Color(0xFF0FC24D),
+            0.8f to Color(0xFFE9F7EE),
             1.0f to Color(0xFFF6F6F7),
         ),
     ),
@@ -195,14 +230,19 @@ data class KokColorScheme(
     val orangeGradientMain: Brush,
     val orangeGradientMain2: Brush,
     val orangeGradientLight: Brush,
+    val orangeGradientSub: Brush,
     val pinkGradientMain: Brush,
     val pinkGradientLight: Brush,
+    val pinkGradientSub: Brush,
     val blueGradientMain: Brush,
     val blueGradientLight: Brush,
+    val blueGradientSub: Brush,
     val purpleGradientMain: Brush,
     val purpleGradientLight: Brush,
+    val purpleGradientSub: Brush,
     val greenGradientMain: Brush,
     val greenGradientLight: Brush,
+    val greenGradientSub: Brush,
 )
 
 val LocalColorScheme = staticCompositionLocalOf {
@@ -259,10 +299,16 @@ val LocalColorScheme = staticCompositionLocalOf {
         orangeGradientLight = Brush.linearGradient(
             colors = listOf(Color.Unspecified, Color.Unspecified),
         ),
+        orangeGradientSub = Brush.linearGradient(
+            colors = listOf(Color.Unspecified, Color.Unspecified),
+        ),
         pinkGradientMain = Brush.linearGradient(
             colors = listOf(Color.Unspecified, Color.Unspecified),
         ),
         pinkGradientLight = Brush.linearGradient(
+            colors = listOf(Color.Unspecified, Color.Unspecified),
+        ),
+        pinkGradientSub = Brush.linearGradient(
             colors = listOf(Color.Unspecified, Color.Unspecified),
         ),
         blueGradientMain = Brush.linearGradient(
@@ -271,16 +317,25 @@ val LocalColorScheme = staticCompositionLocalOf {
         blueGradientLight = Brush.linearGradient(
             colors = listOf(Color.Unspecified, Color.Unspecified),
         ),
+        blueGradientSub = Brush.linearGradient(
+            colors = listOf(Color.Unspecified, Color.Unspecified),
+        ),
         purpleGradientMain = Brush.linearGradient(
             colors = listOf(Color.Unspecified, Color.Unspecified),
         ),
         purpleGradientLight = Brush.linearGradient(
             colors = listOf(Color.Unspecified, Color.Unspecified),
         ),
+        purpleGradientSub = Brush.linearGradient(
+            colors = listOf(Color.Unspecified, Color.Unspecified),
+        ),
         greenGradientMain = Brush.linearGradient(
             colors = listOf(Color.Unspecified, Color.Unspecified),
         ),
         greenGradientLight = Brush.linearGradient(
+            colors = listOf(Color.Unspecified, Color.Unspecified),
+        ),
+        greenGradientSub = Brush.linearGradient(
             colors = listOf(Color.Unspecified, Color.Unspecified),
         ),
     )
