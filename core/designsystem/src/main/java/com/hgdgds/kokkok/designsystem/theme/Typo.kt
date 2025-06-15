@@ -14,10 +14,10 @@ import androidx.compose.ui.unit.sp
 import com.hgdgds.kokkok.designsystem.R
 
 internal val suitFamily = FontFamily(
-    Font(R.font.suit_regular, FontWeight.Bold),
-    Font(R.font.suit_medium, FontWeight.SemiBold),
-    Font(R.font.suit_bold, FontWeight.Medium),
-    Font(R.font.suit_extrabold, FontWeight.Medium),
+    Font(R.font.suit_regular, FontWeight.Normal),
+    Font(R.font.suit_medium, FontWeight.Medium),
+    Font(R.font.suit_bold, FontWeight.Bold),
+    Font(R.font.suit_extrabold, FontWeight.ExtraBold),
 )
 
 private val suitStyle = TextStyle(
@@ -33,8 +33,8 @@ private val suitStyle = TextStyle(
 
 internal val Typography = KokTypography(
     // display32
-    display32Bold = suitStyle.copy(
-        fontWeight = FontWeight.Bold,
+    display32ExtraBold = suitStyle.copy(
+        fontWeight = FontWeight.ExtraBold,
         fontSize = 32.sp,
         lineHeight = 43.2.sp,
         letterSpacing = TextUnit(-0.022f, TextUnitType.Em),
@@ -177,7 +177,7 @@ internal val Typography = KokTypography(
 @Immutable
 data class KokTypography(
     // display32
-    val display32Bold: TextStyle,
+    val display32ExtraBold: TextStyle,
     // heading24
     val heading24Bold: TextStyle,
     val heading24Medium: TextStyle,
@@ -210,7 +210,7 @@ data class KokTypography(
 
 val LocalTypography = staticCompositionLocalOf {
     KokTypography(
-        display32Bold = suitStyle,
+        display32ExtraBold = suitStyle,
         heading24Bold = suitStyle,
         heading24Medium = suitStyle,
         heading24Regular = suitStyle,

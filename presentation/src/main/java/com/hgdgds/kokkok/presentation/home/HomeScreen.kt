@@ -29,7 +29,7 @@ fun HomeScreen(
             tint = KokTheme.colorScheme.blueMain,
         )
         Text(
-            style = KokTheme.typography.display32Bold.copy(
+            style = KokTheme.typography.display32ExtraBold.copy(
                 color = KokTheme.colorScheme.orange500Main,
             ),
             text = "Home",
